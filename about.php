@@ -5,8 +5,8 @@
     require_once "includes/functions.php";
 
     $smarty = new Smarty;
-    // delete when AJAX added
-    $smarty -> assign('posts', get_all_articles());
+    // // delete when AJAX added
+    // $smarty -> assign('posts', get_all_articles());
 
-    $smarty->display("add_article.tpl");
+    $smarty->display("about.tpl");
 ?>

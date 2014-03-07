@@ -1,40 +1,38 @@
-{include file='header.tpl'}
-{include file='menu.tpl' userid=$userid username=$username userhasblog=$userhasblog}
-	<!-- CONTENT -->
-      {include file='search_bar.tpl'}
-	  
-
-	  <h1 class="title">View blogs</h1>
-	  <p>
-	    {if empty($blogs)}No blogs found{/if}
-		{foreach item=blog from=$blogs}
-		- <a href="blog.php?id={$blog.id}">{$blog.title}</a> by {$blog.author}<br />
-		{/foreach}
-	  </p>
-{* Show links to previous/next pages *}
-<p>
-{if $prev_offset < 0}
-  First | Previous
-{else}
-  <a href="index.php?offset=0">First</a> | <a href="index.php?offset={$prev_offset}">Previous</a>
-{/if} |
-
-{section name=pages start=0 loop=$num_blogs step=$items_per_page}
-  {if $offset == $smarty.section.pages.index}
-    {$smarty.section.pages.iteration} | 
-  {else}
-    <a href="index.php?offset={$smarty.section.pages.index}">{$smarty.section.pages.iteration}</a> |
-  {/if}
+<!DOCTYPE html>
+<html>
+  {include file='header.tpl' title="Home page"}
   
-{/section}
+  </head>
 
-{if $next_offset >= $num_blogs}
-  Next | Last
-{else}
-  <a href="index.php?offset={$next_offset}">Next</a> | <a href="index.php?offset={$num_blogs-1}">Last</a>
-{/if}
-	  
-      
-      
-      <!-- END CONTENT -->
-{include file='footer.tpl'}
+  <body>
+    {include file='navbar.tpl'} 
+
+    <div id="wrapper">
+
+    {include file='sidebar.tpl' posts=NULL}
+
+      <div id="page-content-wrapper">
+        <div class="wrapper">
+            <div class="page-content inset">
+                <div class="row">
+                  {foreach from=$posts item=post}
+                    <div class="blog-post">
+                      <h2 class="blog-post-title"><a href="article.php?id={$post->getId()}">{$post->getTitleEN()}</a></h2>
+                      <p class="blog-post-meta">{$post->getDateTime()}</p>
+                      <p>{nl2br(htmlspecialchars($post->getDescEN()))}</p>
+                      <a href="article.php?id={$post->getId()}">Details</a>
+                      <br>
+                      <hr>
+                    </div>
+                  {/foreach}
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+
+        {include file='footer.tpl'}            
+      </div>  
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>    
+  </body>
+
+</html>
