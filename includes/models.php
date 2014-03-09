@@ -106,8 +106,12 @@
             $this->name = array("en" => $n_en, "ua" => $n_ua);
         }
 
-        public function getName() {
-            return $this->name;
+        public function getNameEN() {
+            return $this->name["en"];
+        }
+
+        public function getNameUA() {
+            return $this->name["ua"];
         }
 
         public function setNameEN($n) {
@@ -129,7 +133,6 @@
             $this->id = $i;
             $this->date_time = $dt;
             $this->body = array("en" => $b_en, "ua" => $b_ua);
-            $this->project_id = $pi;
         } 
 
         public function getId() {
@@ -140,8 +143,12 @@
             return $this->date_time;
         } 
 
-        public function getBody() {
-            return $this->body;
+        public function getBodyEN() {
+            return $this->body["en"];
+        } 
+
+        public function getBodyUA() {
+            return $this->body["ua"];
         } 
 
         public function setId($i) {

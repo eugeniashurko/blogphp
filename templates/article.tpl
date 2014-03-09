@@ -9,7 +9,7 @@
 
     <div id="wrapper">
 
-    {include file='sidebar.tpl' posts=NULL}
+    {include file='sidebar.tpl' posts=$broadcast_notes broadcast=$broadcast}
 
       <div id="page-content-wrapper">
         <div class="wrapper">
@@ -17,14 +17,25 @@
                 <div class="row">
                 {if !is_null($current_article) }
                   <div class="blog-post-full">
-                    <h2 class="blog-post-title">{$current_article->getTitleEN()}</h2>
-                    <div class="control">
-                      <a href="">Edit</a>&nbsp;&nbsp;<a href="">Delete</a>
-                    </div>
+                  {if $smarty.session.lang == "uk"}
+                    <h2 class="blog-post-title-full">{$current_article->getTitleUA()}</h2>
                     <p class="blog-post-meta">{$current_article->getDateTime()}</p>
-                    <p>{nl2br(htmlspecialchars($current_article->getBodyEN()))}</p>
-                    <br>
-                  </div>
+                    <div class="control">
+                      <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;<a href="">{$smarty.const.DELETE_TXT}</a>
+                    </div>
+                      <p>{nl2br(htmlspecialchars($current_article->getBodyUA()))}</p>
+                      <br>
+                    </div>
+                  {else}
+                    <h2 class="blog-post-title-full">{$current_article->getTitleEN()}</h2>
+                    <p class="blog-post-meta">{$current_article->getDateTime()}</p>
+                    <div class="control">
+                      <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;<a href="">{$smarty.const.DELETE_TXT}</a>
+                    </div>
+                      <p>{nl2br(htmlspecialchars($current_article->getBodyEN()))}</p>
+                      <br>
+                    </div>
+                  {/if}
                 {else}
                   <h2 class="blog-post-title">Sorry, post was not found</h2>
                 {/if}

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  {include file='header.tpl' title="Login page"}
-  
+
+  {include file='header.tpl' title=$smarty.const.LOGIN_TITLE_TXT}
+
   </head>
 
   <body>
@@ -9,7 +10,7 @@
 
     <div id="wrapper">
 
-    {include file='sidebar.tpl' posts=$posts}
+    {include file='sidebar.tpl' posts=$broadcast_notes broadcast=$broadcast}
 
       <div id="page-content-wrapper">
         <div class="wrapper">
@@ -18,28 +19,28 @@
       
                 <form class="form-horizontal">
                     <!-- Form Name -->
-                    <legend><h2>Please, log in</h2></legend>
+                    <legend><h2>{$smarty.const.LOGIN_HEADER_TXT}</h2></legend>
 
                     <!-- Here login error message -->
                     <div class="error-message">
-                      Log in failed, please check your username or password 
+                      {$smarty.const.ERROR_MESSAGE_TXT}
                     </div>
                     <br>
                     <div class="control-group">
-                        <label class="control-label" for="title_input">Username:</label>&nbsp;&nbsp;<br>
-                        <input name="username" placeholder="Enter password"  type="text">
+                        <label class="control-label" for="title_input">{$smarty.const.USERNAME_LABLE_TXT}</label>&nbsp;&nbsp;<br>
+                        <input name="username" placeholder="{$smarty.const.USERNAME_PLACEHOLDER_TXT}"  type="text">
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="title_input">Password:</label>&nbsp;&nbsp;<br>
-                        <input name="password" placeholder="Enter password"  type="password">
+                        <label class="control-label" for="title_input">{$smarty.const.PASSWORD_LABLE_TXT}</label>&nbsp;&nbsp;<br>
+                        <input name="password" placeholder="{$smarty.const.PASSWORD_PLACEHOLDER_TXT}"  type="password">
                     </div>
 
                     <div class="control-group">
                       <div class="controls">
                         <label class="checkbox inline" for="checkboxes-0">
                           <input name="checkboxes" id="checkboxes-0" value="remember" type="checkbox">
-                          Remember me
+                         {$smarty.const.REMEMBER_TXT}
                         </label>
                       </div>
                     </div>
@@ -48,7 +49,9 @@
                     <div class="control-group">
                       <label class="control-label" for="post_button"></label>
                       <div class="controls">
-                        <button id="post_button" name="post_button" class="btn btn-default">Log In</button>
+                        <button id="post_button" name="post_button" class="btn btn-default">
+                          {$smarty.const.LOGIN_BUTTON_TXT}
+                        </button>
                       </div>
                     </div>
                 </form>

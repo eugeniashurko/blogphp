@@ -1,9 +1,12 @@
 <div class="footer" id="footer">
         <div class="container">
-                <a href="#">Go Up</a>
-                <hr>
-                &copy; Євгенія Ошурко, 2014
-                &nbsp;<a href="">Українська версія</a>
+                <a href="#">{$smarty.const.GO_UP_TXT}</a>
+                <hr>&copy; {$smarty.const.AUTHOR_TXT}, 2014
+                {if $smarty.session.lang=="en"}
+                &nbsp;<a href="switch_lang.php?lang=uk">Українська версія</a>
+                {else}
+                &nbsp;<a href="switch_lang.php?lang=en">English version</a>
+                {/if} 
         </div>
 </div>    
 

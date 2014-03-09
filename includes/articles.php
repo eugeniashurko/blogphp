@@ -26,7 +26,7 @@
 				$list[$i]["body_en"], $list[$i]["body_ua"]);
 			// add sth with image
 		}
-		return array($article_list, $rows_found);
+		return $article_list;
 	}
 
 	// Get an article detailes by id

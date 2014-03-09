@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  {include file='header.tpl' title="About project"}
+  {include file='header.tpl' title=$smarty.const.ABOUT_TITLE_TXT}
   
   </head>
 
@@ -9,26 +9,23 @@
 
     <div id="wrapper">
 
-    {include file='sidebar.tpl' posts=NULL}
+    {include file='sidebar.tpl' posts=$broadcast_notes broadcast=$broadcast}
 
       <div id="page-content-wrapper">
         <div class="wrapper">
             <div class="page-content inset">
                 <div class="row">
                 
-                  <h2>Про блог</h2>
-                  <p>Блог розроблено в рамках курсу Веб Програмування (2014).
-                  <br>
-                  Мене звати Євгенія Ошурко, я студентка бакалаврської програми "Програмна інженерія" в Національному університеті "Києво-Могилянська академія".
-                  </p>
+                  <h2>{$smarty.const.ABOUT_HEADER_TXT}</h2>
+                  <p>{nl2br(htmlspecialchars($smarty.const.ABOUT_BODY_TXT))}</p>
                   <br><br>
-                  <h3>Контакти та акаунти:</h3>
+                  <h3>{$smarty.const.CONTACTS_ACCOUNTS_TXT}</h3>
                   <br>
                   e-mail: yarutoua(at)gmail.com
                   <br>
                   <a href="https://www.facebook.com/eugenia.oshurko">facebook</a>
                   <br>
-                  <a href="https://github.com/eugeniashurko">github</a>
+                  <a href="https://github.com/eugeniashurko/blogphp">github</a>
                   <br>       
                 </div>
             </div>

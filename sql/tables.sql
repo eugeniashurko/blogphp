@@ -20,7 +20,7 @@ CREATE TABLE images (
     image_ctgy VARCHAR(25) NOT NULL,
     image_name VARCHAR(50) NOT NULL,
     PRIMARY KEY(id) 
-) CHARACTER SET latin1;
+) CHARACTER SET utf8;
 
 CREATE TABLE articles (
     id INT AUTO_INCREMENT,
@@ -34,7 +34,7 @@ CREATE TABLE articles (
     image_id INT DEFAULT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(image_id) REFERENCES images(id) ON DELETE CASCADE
-) CHARACTER SET cp1251;
+) CHARACTER SET utf8;
 
 CREATE TABLE projects (
     id INT AUTO_INCREMENT,
@@ -42,7 +42,7 @@ CREATE TABLE projects (
     name_ua VARCHAR(80) NOT NULL,
     active TINYINT(1) NOT NULL,
     PRIMARY KEY(id)
-) CHARACTER SET cp1251;
+) CHARACTER SET utf8;
 
 CREATE TABLE notes (
     id INT AUTO_INCREMENT,
@@ -52,5 +52,5 @@ CREATE TABLE notes (
     project_id INT NOT NULL,
     PRIMARY KEY(id),
     FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
-) CHARACTER SET cp1251;
+) CHARACTER SET utf8;
 
