@@ -1,3 +1,3 @@
 <?php
-    define("SMARTY_INCL_DIR", "/usr/local/lib/php/Smarty/Smarty.class.php");
+    define("SMARTY_INCL_DIR", "vendor/Smarty/Smarty.class.php");
 ?>
