@@ -8,7 +8,7 @@ function show_error() {
 
 // opens de db, returns $conn for the connection data
 function open_db(){
-    $conn = mysql_connect(HOST, USER, PASSWORD) or die ("Error connecting to the database.<br />\n");
+    $conn = mysql_connect(HOST . ":" . PORT, USER, PASSWORD) or die ("Error connecting to the database.<br />\n");
     mysql_set_charset('utf8', $conn);
     mysql_select_db(DATABASE, $conn) or show_error();
     return $conn;

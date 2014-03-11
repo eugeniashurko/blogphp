@@ -2,17 +2,19 @@
 
 if(!getenv('OPENSHIFT_APP_UUID')) {
 
-    define("HOST", "localhost"); // The database server's host
-    define("USER", "blog"); // The database owner's name
-    define("PASSWORD", "blog"); // The database owner's password
-    define("DATABASE", "BLOG"); // The database's name
+    define("HOST", "localhost");
+    define("PORT", "3306");
+    define("USER", "blog");
+    define("PASSWORD", "blog");
+    define("DATABASE", "BLOG");
 
 } else {
     
-    define("HOST", "localhost"); // The database server's host
-    define("USER", "adminVKhiNgA"); // The database owner's name
-    define("PASSWORD", "rhCEA2eZNwKk"); // The database owner's password
-    define("DATABASE", "blog"); // The database's name
+    define('HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+    define('PORT',getenv('OPENSHIFT_MYSQL_DB_PORT')); 
+    define('USER',getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+    define('PASSWORD',getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+    define('DATABASE',getenv('OPENSHIFT_GEAR_NAME'));
 
 }
 
