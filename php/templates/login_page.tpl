@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    {include file='navbar.tpl'} 
+    {include file='navbar.tpl' logged_in=$logged_in} 
 
     <div id="wrapper">
 
@@ -17,39 +17,33 @@
             <div class="page-content inset">
                 <div class="row">
       
-                <form class="form-horizontal">
+                <form action="login.php" method="post" class="form-horizontal">
                     <!-- Form Name -->
                     <legend><h2>{$smarty.const.LOGIN_HEADER_TXT}</h2></legend>
 
                     <!-- Here login error message -->
+                    {if ($message)}
                     <div class="error-message">
-                      {$smarty.const.ERROR_MESSAGE_TXT}
+                      {$message}
                     </div>
+                    {/if}
                     <br>
                     <div class="control-group">
                         <label class="control-label" for="title_input">{$smarty.const.USERNAME_LABLE_TXT}</label>&nbsp;&nbsp;<br>
-                        <input name="username" placeholder="{$smarty.const.USERNAME_PLACEHOLDER_TXT}"  type="text">
+                        <input name="username" value="" placeholder="{$smarty.const.USERNAME_PLACEHOLDER_TXT}"  type="text">
                     </div>
 
                     <div class="control-group">
                         <label class="control-label" for="title_input">{$smarty.const.PASSWORD_LABLE_TXT}</label>&nbsp;&nbsp;<br>
-                        <input name="password" placeholder="{$smarty.const.PASSWORD_PLACEHOLDER_TXT}"  type="password">
+                        <input name="password" value="" placeholder="{$smarty.const.PASSWORD_PLACEHOLDER_TXT}"  type="password">
                     </div>
 
-                    <div class="control-group">
-                      <div class="controls">
-                        <label class="checkbox inline" for="checkboxes-0">
-                          <input name="checkboxes" id="checkboxes-0" value="remember" type="checkbox">
-                         {$smarty.const.REMEMBER_TXT}
-                        </label>
-                      </div>
-                    </div>
 
                     <!-- Button -->
                     <div class="control-group">
                       <label class="control-label" for="post_button"></label>
                       <div class="controls">
-                        <button id="post_button" name="post_button" class="btn btn-default">
+                        <button type="submit">
                           {$smarty.const.LOGIN_BUTTON_TXT}
                         </button>
                       </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-03-09 14:57:59
+<?php /* Smarty version Smarty-3.1.16, created on 2014-03-29 21:07:04
          compiled from "./templates/login_page.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1552798823530baf6f15cd97-57523537%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b269c535022c17144f654b63a4f2323e9fa40f11' => 
     array (
       0 => './templates/login_page.tpl',
-      1 => 1394369876,
+      1 => 1396120018,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_530baf6f18dd28_80707441',
   'variables' => 
   array (
+    'logged_in' => 0,
     'broadcast_notes' => 0,
     'broadcast' => 0,
+    'message' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -33,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </head>
 
   <body>
-    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('logged_in'=>$_smarty_tpl->tpl_vars['logged_in']->value), 0);?>
  
 
     <div id="wrapper">
@@ -46,46 +48,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="page-content inset">
                 <div class="row">
       
-                <form class="form-horizontal">
+                <form action="login.php" method="post" class="form-horizontal">
                     <!-- Form Name -->
                     <legend><h2><?php echo @constant('LOGIN_HEADER_TXT');?>
 </h2></legend>
 
                     <!-- Here login error message -->
+                    <?php if (($_smarty_tpl->tpl_vars['message']->value)) {?>
                     <div class="error-message">
-                      <?php echo @constant('ERROR_MESSAGE_TXT');?>
+                      <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
 
                     </div>
+                    <?php }?>
                     <br>
                     <div class="control-group">
                         <label class="control-label" for="title_input"><?php echo @constant('USERNAME_LABLE_TXT');?>
 </label>&nbsp;&nbsp;<br>
-                        <input name="username" placeholder="<?php echo @constant('USERNAME_PLACEHOLDER_TXT');?>
+                        <input name="username" value="" placeholder="<?php echo @constant('USERNAME_PLACEHOLDER_TXT');?>
 "  type="text">
                     </div>
 
                     <div class="control-group">
                         <label class="control-label" for="title_input"><?php echo @constant('PASSWORD_LABLE_TXT');?>
 </label>&nbsp;&nbsp;<br>
-                        <input name="password" placeholder="<?php echo @constant('PASSWORD_PLACEHOLDER_TXT');?>
+                        <input name="password" value="" placeholder="<?php echo @constant('PASSWORD_PLACEHOLDER_TXT');?>
 "  type="password">
                     </div>
 
-                    <div class="control-group">
-                      <div class="controls">
-                        <label class="checkbox inline" for="checkboxes-0">
-                          <input name="checkboxes" id="checkboxes-0" value="remember" type="checkbox">
-                         <?php echo @constant('REMEMBER_TXT');?>
-
-                        </label>
-                      </div>
-                    </div>
 
                     <!-- Button -->
                     <div class="control-group">
                       <label class="control-label" for="post_button"></label>
                       <div class="controls">
-                        <button id="post_button" name="post_button" class="btn btn-default">
+                        <button type="submit">
                           <?php echo @constant('LOGIN_BUTTON_TXT');?>
 
                         </button>

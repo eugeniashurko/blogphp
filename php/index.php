@@ -6,6 +6,11 @@
     require_once "includes/functions.php";
     defineStrings();
     
+    $logged_in = false;
+    if (isset($_SESSION["user_id"])) {
+        $logged_in = true;
+    }
+
     $smarty = new Smarty;
 
     $articles = get_all_articles();
@@ -18,6 +23,6 @@
     $b_notes = $b_result[1];
     $smarty -> assign('broadcast', $b_name);
     $smarty -> assign('broadcast_notes', $b_notes);
-
+    $smarty -> assign('logged_in', $logged_in);
     $smarty->display("index.tpl");
 ?>

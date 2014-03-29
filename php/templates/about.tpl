@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    {include file='navbar.tpl'} 
+    {include file='navbar.tpl' logged_in=$logged_in} 
 
     <div id="wrapper">
 

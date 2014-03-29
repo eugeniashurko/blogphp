@@ -11,6 +11,9 @@
                 define("CLOSE_B_TXT", "Close broadcast");
                 define("BROADCAST_TXT", "Broadcast");
                 define("LOGIN_TXT", "Log in");
+                define("LOGOUT_TXT", "Log out");
+                define("GREETING","Hi");
+
                 //sidebar txt
                 define("NO_BROADCAST_TXT","No Broadcast"); 
                 define("NO_BROADCAST_DESC_TXT","Broadcast is currently closed"); 
@@ -37,13 +40,33 @@
                 //for add_article.txt
                 define("ADD_ARTICLE_TITLE_TXT", "New article page");
                 define("ADD_ARTICLE_HEADER_TXT", "New Article");
-                define("TITLE_LABLE_TXT", "Titile");
-                define("TITLE_PLACEHOLDER_TXT", "Article Title");
-                define("DESC_LABLE_TXT", "Description");
-                define("DESC_PLACEHOLDER_TXT", "Article Description");
-                define("BODY_LABLE_TXT", "Body");
-                define("BODY_PLACEHOLDER_TXT", "Article Body");
+
+                define("TITLE_LABLE_EN_TXT", "Title English");
+                define("TITLE_PLACEHOLDER_EN_TXT", "Article Title in English");
+                define("TITLE_LABLE_UK_TXT", "Title Ukrainian");
+                define("TITLE_PLACEHOLDER_UK_TXT", "Article Title in Ukrainian");
+                
+                define("DESC_LABLE_EN_TXT", "Description English");
+                define("DESC_PLACEHOLDER_EN_TXT", "Article Description in Ukrainian");
+                define("DESC_LABLE_UK_TXT", "Description Ukrainian");
+                define("DESC_PLACEHOLDER_UK_TXT", "Article Description in Ukrainian");
+                
+                define("BODY_LABLE_EN_TXT", "Body English");
+                define("BODY_PLACEHOLDER_EN_TXT", "Article Body in English");
+                define("BODY_LABLE_UK_TXT", "Body Ukrainian");
+                define("BODY_PLACEHOLDER_UK_TXT", "Article Body in Ukrainian");
+                                    
                 define("BUTTON_LABLE_TXT", "Publish");
+
+                // for add_note.tpl
+                define("ADD_NOTE_TITLE_TXT", "New note page");
+                define("ADD_NOTE_HEADER_TXT", "New Note to Broadcast");
+
+                define("NOTE_BODY_LABLE_EN_TXT", "Body English");
+                define("NOTE_BODY_PLACEHOLDER_EN_TXT", "Note Body in English");
+                define("NOTE_BODY_LABLE_UK_TXT", "Body Ukrainian");
+                define("NOTE_BODY_PLACEHOLDER_UK_TXT", "Note Body in Ukrainian");
+
 
                 //for login_page.tpl
                 define("LOGIN_TITLE_TXT", "Login page");
@@ -56,6 +79,14 @@
                 define("REMEMBER_TXT", "Remember me");
                 define("LOGIN_BUTTON_TXT", "Log In");
 
+                // error messages
+                define("LOGIN_ERROR", "Please enter a valid username and password");
+                define("LOGGED_USER_LOG_ATTEMPT", "User is already logged in");
+                define("LOGIN_USERNAME_ERROR", "Invalid username");
+                define("LOGIN_PASSWORD_ERROR", "Invalid password");
+                define("LOGIN_USER_DOES_NOT_EXIST", "Authentication failed, check your username and password!");
+                define("PERMISSION_DENIED", "You don't have permission for this action");
+                
                 break; 
             case "uk": 
                 define("BLOG_LOGO_TXT","Мій Блог"); 
@@ -66,6 +97,9 @@
                 define("CLOSE_B_TXT", "Завершити");
                 define("BROADCAST_TXT", "Транслювати");
                 define("LOGIN_TXT", "Увійти");
+                define("LOGOUT_TXT", "Вийти");
+                define("GREETING","Привіт");
+
                 //sidebar txt
                 define("NO_BROADCAST_TXT","Трансляція Неактивна"); 
                 define("NO_BROADCAST_DESC_TXT","На данний момент активних трансляцій немає"); 
@@ -92,13 +126,34 @@
                 //for add_article.txt
                 define("ADD_ARTICLE_TITLE_TXT", "Додати новий запис");
                 define("ADD_ARTICLE_HEADER_TXT", "Новий Запис");
-                define("TITLE_LABLE_TXT", "Заголовок");
-                define("TITLE_PLACEHOLDER_TXT", "Заголовок запису");
-                define("DESC_LABLE_TXT", "Опис");
-                define("DESC_PLACEHOLDER_TXT", "Короткий опис статті");
-                define("BODY_LABLE_TXT", "Тіло");
-                define("BODY_PLACEHOLDER_TXT", "Текст статті");
+                
+                define("TITLE_LABLE_EN_TXT", "Заголовок англійською");
+                define("TITLE_PLACEHOLDER_EN_TXT", "Заголовок запису англійською мовою");
+                define("TITLE_LABLE_UK_TXT", "Заголовок українською");
+                define("TITLE_PLACEHOLDER_UK_TXT", "Заголовок запису українською мовою");
+                
+                define("DESC_LABLE_EN_TXT", "Опис англійською");
+                define("DESC_PLACEHOLDER_EN_TXT", "Короткий опис статті англійською мовою");
+                define("DESC_LABLE_UK_TXT", "Опис українською");
+                define("DESC_PLACEHOLDER_UK_TXT", "Короткий опис статті українською мовою");
+                
+                define("BODY_LABLE_EN_TXT", "Тіло англійською");
+                define("BODY_PLACEHOLDER_EN_TXT", "Текст статті англійською мовою");
+                define("BODY_LABLE_UK_TXT", "Тіло українською");
+                define("BODY_PLACEHOLDER_UK_TXT", "Текст статті українською мовою");
+
                 define("BUTTON_LABLE_TXT", "Публікувати");
+
+
+                // for add_note.tpl
+                define("ADD_NOTE_TITLE_TXT", "Додати нову нотатку");
+                define("ADD_NOTE_HEADER_TXT", "Нова Нотатка до Трансляції");
+
+                define("NOTE_BODY_LABLE_EN_TXT", "Тіло англійською");
+                define("NOTE_BODY_PLACEHOLDER_EN_TXT", "Текс нотатки англійською мовою");
+                define("NOTE_BODY_LABLE_UK_TXT", "Тіло українською");
+                define("NOTE_BODY_PLACEHOLDER_UK_TXT", "Текс нотатки українською мовою");
+
 
                 //for login_page.tpl
                 define("LOGIN_TITLE_TXT", "Сторінка входу");
@@ -110,6 +165,14 @@
                 define("PASSWORD_PLACEHOLDER_TXT", "Введіть пароль");
                 define("REMEMBER_TXT", "Запам’ятати мене");
                 define("LOGIN_BUTTON_TXT", "Увійти");
+
+                // error messages
+                define("LOGIN_ERROR", "Будь-ласка введіть правильне ім’я та пароль");
+                define("LOGGED_USER_LOG_ATTEMPT", "Користувач вже увійшов у систему");
+                define("LOGIN_USERNAME_ERROR", "Некоректне ім’я користувача");
+                define("LOGIN_PASSWORD_ERROR", "Некоректний пароль");
+                define("LOGIN_USER_DOES_NOT_EXIST", "Помилка автентифікації, перевірте своє ім’я та пароль");
+                define("PERMISSION_DENIED", "Ви не маєте прав на здійснення цієї дії");
                 break; 
             default: 
                 define("BLOG_LOGO_TXT","My Blog"); 
@@ -120,6 +183,9 @@
                 define("CLOSE_B_TXT", "Close broadcast");
                 define("BROADCAST_TXT", "Broadcast");
                 define("LOGIN_TXT", "Log in");
+                define("LOGOUT_TXT", "Log out");
+                define("GREETING","Hi");
+                
                 //sidebar txt
                 define("NO_BROADCAST_TXT","No Broadcast"); 
                 define("NO_BROADCAST_DESC_TXT","Broadcast is currently closed"); 
@@ -142,13 +208,31 @@
                 //for add_article.txt
                 define("ADD_ARTICLE_TITLE_TXT", "New article page");
                 define("ADD_ARTICLE_HEADER_TXT", "New Article");
-                define("TITLE_LABLE_TXT", "Titile");
-                define("TITLE_PLACEHOLDER_TXT", "Article Title");
-                define("DESC_LABLE_TXT", "Description");
-                define("DESC_PLACEHOLDER_TXT", "Article Description");
-                define("BODY_LABLE_TXT", "Body");
-                define("BODY_PLACEHOLDER_TXT", "Article Body");
+
+                define("TITLE_LABLE_EN_TXT", "Title English");
+                define("TITLE_PLACEHOLDER_EN_TXT", "Article Title in English");
+                define("TITLE_LABLE_UK_TXT", "Title Ukrainian");
+                define("TITLE_PLACEHOLDER_UK_TXT", "Article Title in Ukrainian");
+                
+                define("DESC_LABLE_EN_TXT", "Description English");
+                define("DESC_PLACEHOLDER_EN_TXT", "Article Description in Ukrainian");
+                define("DESC_LABLE_UK_TXT", "Description Ukrainian");
+                define("DESC_PLACEHOLDER_UK_TXT", "Article Description in Ukrainian");
+                
+                define("BODY_LABLE_EN_TXT", "Body English");
+                define("BODY_PLACEHOLDER_EN_TXT", "Article Body in English");
+                define("BODY_LABLE_UK_TXT", "Body Ukrainian");
+                define("BODY_PLACEHOLDER_UK_TXT", "Article Body in Ukrainian");
                 define("BUTTON_LABLE_TXT", "Publish");
+
+                // for add_note.tpl
+                define("ADD_NOTE_TITLE_TXT", "New note page");
+                define("ADD_NOTE_HEADER_TXT", "New Note to Broadcast");
+
+                define("NOTE_BODY_LABLE_EN_TXT", "Body English");
+                define("NOTE_BODY_PLACEHOLDER_EN_TXT", "Note Body in English");
+                define("NOTE_BODY_LABLE_UK_TXT", "Body Ukrainian");
+                define("NOTE_BODY_PLACEHOLDER_UK_TXT", "Note Body in Ukrainian");
 
                 //for login_page.tpl
                 define("LOGIN_TITLE_TXT", "Login page");
@@ -164,6 +248,14 @@
                 // for article.tpl
                 define("EDIT_TXT", "Edit");
                 define("DELETE_TXT", "Delete");
+
+                // error messages
+                define("LOGIN_ERROR", "Please enter a valid username and password");
+                define("LOGGED_USER_LOG_ATTEMPT", "User is already logged in");
+                define("LOGIN_USERNAME_ERROR", "Invalid username");
+                define("LOGIN_PASSWORD_ERROR", "Invalid password");
+                define("LOGIN_USER_DOES_NOT_EXIST", "Authentication failed, check your username and password!");
+                define("PERMISSION_DENIED", "You don't have permission for this action");
                 break; 
         } 
     } 

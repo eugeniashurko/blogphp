@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    {include file='navbar.tpl'} 
+    {include file='navbar.tpl' logged_in=$logged_in} 
 
     <div id="wrapper">
 
@@ -21,7 +21,10 @@
                     <h2 class="blog-post-title-full">{$current_article->getTitleUA()}</h2>
                     <p class="blog-post-meta">{$current_article->getDateTime()}</p>
                     <div class="control">
-                      <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;<a href="">{$smarty.const.DELETE_TXT}</a>
+                      {if $logged_in}
+                        <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
+                        <a href="">{$smarty.const.DELETE_TXT}</a>
+                      {/if}
                     </div>
                       <p>{nl2br(htmlspecialchars($current_article->getBodyUA()))}</p>
                       <br>
@@ -30,7 +33,10 @@
                     <h2 class="blog-post-title-full">{$current_article->getTitleEN()}</h2>
                     <p class="blog-post-meta">{$current_article->getDateTime()}</p>
                     <div class="control">
-                      <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;<a href="">{$smarty.const.DELETE_TXT}</a>
+                      {if $logged_in}
+                        <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
+                        <a href="">{$smarty.const.DELETE_TXT}</a>
+                      {/if}
                     </div>
                       <p>{nl2br(htmlspecialchars($current_article->getBodyEN()))}</p>
                       <br>

@@ -48,4 +48,13 @@
 				$list[0]["body_en"], $list[0]["body_ua"]);
 		return $article;
 	}
+
+	function new_article($article) {
+		$conn = open_db();
+		$query = "INSERT INTO articles VALUES ()";
+	}
+
+	function update_atricle($article) {
+
+	}
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-03-09 14:56:01
+<?php /* Smarty version Smarty-3.1.16, created on 2014-03-29 20:39:39
          compiled from "./templates/about.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:89878388952fffd8a258962-98930101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f45d8ababa5d6f5c301aa6e6fbb98df40da92477' => 
     array (
       0 => './templates/about.tpl',
-      1 => 1394369759,
+      1 => 1396118367,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_52fffd8a2a95a3_38588240',
   'variables' => 
   array (
+    'logged_in' => 0,
     'broadcast_notes' => 0,
     'broadcast' => 0,
   ),
@@ -32,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </head>
 
   <body>
-    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('logged_in'=>$_smarty_tpl->tpl_vars['logged_in']->value), 0);?>
  
 
     <div id="wrapper">

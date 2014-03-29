@@ -7,5 +7,7 @@
     include_once 'includes/broadcast.php';
     include_once 'includes/lang.php'; 
     include_once 'includes/txt.php';
+    include_once 'includes/validators.php';
+    include_once 'includes/login_utils.php';
     //include_once 'includes/images.php';
 ?>

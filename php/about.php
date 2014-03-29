@@ -7,6 +7,11 @@
 
     defineStrings();
 
+    $logged_in = false;
+    if (isset($_SESSION["user_id"])) {
+        $logged_in = true;
+    }
+
     $smarty = new Smarty;
 
     $b_result = get_broadcast();
@@ -14,6 +19,7 @@
     $b_notes = $b_result[1];
     $smarty -> assign('broadcast', $b_name);
     $smarty -> assign('broadcast_notes', $b_notes);
+    $smarty -> assign('logged_in', $logged_in);
 
     $smarty->display("about.tpl");
 ?>

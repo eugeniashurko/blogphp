@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-03-09 15:07:22
+<?php /* Smarty version Smarty-3.1.16, created on 2014-03-29 20:50:38
          compiled from "./templates/article.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:162627367752ffc6d62316a6-11789616%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf8cadff64b65c98c52f0bac33a4fd0c3cb02a05' => 
     array (
       0 => './templates/article.tpl',
-      1 => 1394370438,
+      1 => 1396119037,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'current_article' => 0,
+    'logged_in' => 0,
     'broadcast_notes' => 0,
     'broadcast' => 0,
   ),
@@ -33,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </head>
 
   <body>
-    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('logged_in'=>$_smarty_tpl->tpl_vars['logged_in']->value), 0);?>
  
 
     <div id="wrapper">
@@ -53,9 +54,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <p class="blog-post-meta"><?php echo $_smarty_tpl->tpl_vars['current_article']->value->getDateTime();?>
 </p>
                     <div class="control">
-                      <a href=""><?php echo @constant('EDIT_TXT');?>
-</a>&nbsp;&nbsp;<a href=""><?php echo @constant('DELETE_TXT');?>
+                      <?php if ($_smarty_tpl->tpl_vars['logged_in']->value) {?>
+                        <a href=""><?php echo @constant('EDIT_TXT');?>
+</a>&nbsp;&nbsp;
+                        <a href=""><?php echo @constant('DELETE_TXT');?>
 </a>
+                      <?php }?>
                     </div>
                       <p><?php echo nl2br(htmlspecialchars($_smarty_tpl->tpl_vars['current_article']->value->getBodyUA()));?>
 </p>
@@ -67,9 +71,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <p class="blog-post-meta"><?php echo $_smarty_tpl->tpl_vars['current_article']->value->getDateTime();?>
 </p>
                     <div class="control">
-                      <a href=""><?php echo @constant('EDIT_TXT');?>
-</a>&nbsp;&nbsp;<a href=""><?php echo @constant('DELETE_TXT');?>
+                      <?php if ($_smarty_tpl->tpl_vars['logged_in']->value) {?>
+                        <a href=""><?php echo @constant('EDIT_TXT');?>
+</a>&nbsp;&nbsp;
+                        <a href=""><?php echo @constant('DELETE_TXT');?>
 </a>
+                      <?php }?>
                     </div>
                       <p><?php echo nl2br(htmlspecialchars($_smarty_tpl->tpl_vars['current_article']->value->getBodyEN()));?>
 </p>

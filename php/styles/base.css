@@ -56,7 +56,7 @@ a.important:hover{
 
 .navbar-center {
 
-  margin-left: 15em !important;
+  margin-left: 11em !important;
 }
 
 .navbar-links {
@@ -283,4 +283,13 @@ hr {
 
 h2 {
   color: #5c5c5c;
+}
+
+#note_body_input {
+  width: 100%;
+  height: 5em
+}
+
+.greet {
+  color: #F5F5F5;
 }
