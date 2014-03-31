@@ -125,19 +125,14 @@
     }
 
     class Note {
-        private $id;
         private $date_time;
         private $body;
 
-        public function __construct($i, $dt, $b_en, $b_ua) {
-            $this->id = $i;
+        public function __construct($dt, $b_en, $b_ua) {
             $this->date_time = $dt;
             $this->body = array("en" => $b_en, "ua" => $b_ua);
         } 
 
-        public function getId() {
-            return $this->id;
-        } 
 
         public function getDateTime() {
             return $this->date_time;
@@ -149,10 +144,6 @@
 
         public function getBodyUA() {
             return $this->body["ua"];
-        } 
-
-        public function setId($i) {
-            $this->id = $i;
         } 
 
         public function setDateTime($dt) {

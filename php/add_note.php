@@ -12,6 +12,12 @@
         $logged_in = true;
     }    
 
+    $message = false;
+    
+    if(isset( $_GET['m'] )) {
+        $message = $_GET['m'];
+    }
+
     $smarty = new Smarty;
     // delete when AJAX added
     $b_result = get_broadcast();
@@ -19,6 +25,7 @@
     $b_notes = $b_result[1];
     $smarty -> assign('broadcast', $b_name);
     $smarty -> assign('broadcast_notes', $b_notes);
+    $smarty ->assign('message', $message);
     $smarty -> assign('logged_in', $logged_in);
     $smarty->display("add_note.tpl");
 ?>

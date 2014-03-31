@@ -135,37 +135,28 @@ INSERT INTO notes VALUES (
     1,
     "2014-03-05 12:25:41",
     "As reported, OSCE Representative on Freedom of the Media Dunja Mijatovic arrived in Crimea on Wednesday, to meet with local reporters. She will report on the results of her visit to the peninsula at a press conference scheduled for February 7 in Kyiv.",
-    "Як повідомлялося, представник ОБСЄ з питань свободи ЗМІ Дунья Міятович прибув до Криму в середу, щоб зустрітися з місцевими журналістами. Вона повідомить про результати свого візиту на півострів на прес-конференції, запланованої на 7 лютого в Києві.",
-    1 
-);
+    "Як повідомлялося, представник ОБСЄ з питань свободи ЗМІ Дунья Міятович прибув до Криму в середу, щоб зустрітися з місцевими журналістами. Вона повідомить про результати свого візиту на півострів на прес-конференції, запланованої на 7 лютого в Києві.");
 INSERT INTO notes VALUES (
     2,
     "2014-03-05 13:55:41",
     "After the meeting, Mijatovic and other members of the OSCE mission wanted to leave the building through the back door, while the men in camouflage tried to prevent them from doing so, chanting \'Russia!\' However, the OSCE representatives managed to leave the hotel and they are on their way to Simferopol International Airport.",
-    "Після зустрічі Міятович та інші члени місії ОБСЄ хотіли покинути будівлю через задні двері, в той час як люди в камуфляжі намагалися перешкодити їм у цьому, скандуючи \'Росія!\' Проте, представники ОБСЄ вдалося покинути готель, і вони знаходяться на шляху до міжнародного аеропорту Сімферополя.",
-    1 
+    "Після зустрічі Міятович та інші члени місії ОБСЄ хотіли покинути будівлю через задні двері, в той час як люди в камуфляжі намагалися перешкодити їм у цьому, скандуючи \'Росія!\' Проте, представники ОБСЄ вдалося покинути готель, і вони знаходяться на шляху до міжнародного аеропорту Сімферополя." 
 );
 INSERT INTO notes VALUES (
     3,
     "2014-03-05 14:11:01",
     "These people blocked the main entrance to the hotel, which is located next to the Supreme Council of Crimea, Simferopol and all the entrances to the building, the Center for Investigative Journalism reported on Wednesday.",
-    "Ці люди перекрили головний вхід в готель, який розташований поряд з Верховної Ради Криму, Сімферополя і всіх входів у будинки, Центр журналістських розслідувань повідомило в середу. ",
-    1 
-);
+    "Ці люди перекрили головний вхід в готель, який розташований поряд з Верховної Ради Криму, Сімферополя і всіх входів у будинки, Центр журналістських розслідувань повідомило в середу. ");
 INSERT INTO notes VALUES (
     4,
     "2014-03-05 17:45:56",
     "17.12 Unidentified people in camouflage and body armor, as well as members of the Crimean Cossacks have blocked the Ukraine hotel where OSCE Representative on Freedom of the Media Dunja Mijatovic held a meeting with editors of Crimean media and social activists.",
-    "17.12 невідомі люди в камуфляжі і бронежилетах, а також члени кримських козаків заблокували готель Україна, де представник ОБСЄ з питань свободи ЗМІ Дунья Міятович провів зустріч з редакторами кримських ЗМІ та громадських активістів. ",
-    1 
-);
+    "17.12 невідомі люди в камуфляжі і бронежилетах, а також члени кримських козаків заблокували готель Україна, де представник ОБСЄ з питань свободи ЗМІ Дунья Міятович провів зустріч з редакторами кримських ЗМІ та громадських активістів. ");
 INSERT INTO notes VALUES (
     5,
     "2014-03-05 18:30:01",
     "18.16 Ukrainian soldiers detain one of the \'green men\'' unidentified soldiers. The guy is from Russian army, Yoshkar-Ola city. Name: Aleksei Medvedev. Invasion proved. Shoygu - liar.",
-    "18.16 Українські солдати затримати одного з \'зелених чоловічків\' невідомі солдати. Хлопець з російської армії, м. Йошкар-Ола. Ім'я: Олексій Медведєв. Вторгнення доведена. Шойгу - брехун. ",
-    1 
-);
+    "18.16 Українські солдати затримати одного з \'зелених чоловічків\' невідомі солдати. Хлопець з російської армії, м. Йошкар-Ола. Ім'я: Олексій Медведєв. Вторгнення доведена. Шойгу - брехун. ");
 
 
 

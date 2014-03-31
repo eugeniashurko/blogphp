@@ -16,21 +16,25 @@
             <div class="page-content inset">
                 <div class="row">
               {if $logged_in}
-                <form class="form-horizontal">
+                <form action="proceed_add_note.php" method="post" class="form-horizontal">
                     <!-- Form Name -->
                     <legend><h2>{$smarty.const.ADD_NOTE_HEADER_TXT}</h2></legend>
-                    
+                    {if ($message)}
+                      <div class="error-message">
+                        {$message}
+                      </div>
+                    {/if}
                     <!-- Body input -->
                     <div class="control-group">
                       <label class="control-label" for="body_input">{$smarty.const.NOTE_BODY_LABLE_EN_TXT}</label>
                       <div class="controls">                     
-                        <textarea id="note_body_input" name="body_input" placeholder="{$smarty.const.NOTE_BODY_PLACEHOLDER_EN_TXT}"></textarea>
+                        <textarea id="note_body_input" name="body_input_en" placeholder="{$smarty.const.NOTE_BODY_PLACEHOLDER_EN_TXT}"></textarea>
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" for="body_input">{$smarty.const.NOTE_BODY_LABLE_UK_TXT}</label>
                       <div class="controls">                     
-                        <textarea id="note_body_input" name="body_input" placeholder="{$smarty.const.NOTE_BODY_PLACEHOLDER_UK_TXT}"></textarea>
+                        <textarea id="note_body_input" name="body_input_ua" placeholder="{$smarty.const.NOTE_BODY_PLACEHOLDER_UK_TXT}"></textarea>
                       </div>
                     </div>
 
@@ -38,7 +42,7 @@
                     <div class="control-group">
                       <label class="control-label" for="post_button"></label>
                       <div class="controls">
-                        <button id="post_note_button" name="post_button" class="btn btn-default">{$smarty.const.BUTTON_LABLE_TXT}</button>
+                        <button type="submit" name="post_button" class="btn btn-default">{$smarty.const.BUTTON_LABLE_TXT}</button>
                       </div>
                     </div>
                 </form>

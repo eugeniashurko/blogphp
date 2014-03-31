@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    {include file='navbar.tpl' logged_in=$logged_in} 
+    {include file='navbar.tpl' broadcast=$broadcast logged_in=$logged_in} 
 
     <div id="wrapper">
     {if $smarty.session.lang == "uk"}
@@ -15,16 +15,20 @@
         <div class="wrapper">
             <div class="page-content inset">
                 <div class="row">
-                  {foreach from=$posts item=post}
-                    <div class="blog-post">
-                      <h2 class="blog-post-title"><a href="article.php?id={$post->getId()}">{$post->getTitleUA()}</a></h2>
-                      <p class="blog-post-meta">{$post->getDateTime()}</p>
-                      <p>{nl2br(htmlspecialchars($post->getDescUA()))}</p>
-                      <a href="article.php?id={$post->getId()}">{$smarty.const.DETAILS_TXT}</a>
-                      <br>
-                      <hr>
-                    </div>
-                  {/foreach}
+                  {if count($posts) != 0}
+                    {foreach from=$posts item=post}
+                      <div class="blog-post">
+                        <h2 class="blog-post-title"><a href="article.php?id={$post->getId()}">{$post->getTitleUA()}</a></h2>
+                        <p class="blog-post-meta">{$post->getDateTime()}</p>
+                        <p>{nl2br(htmlspecialchars($post->getDescUA()))}</p>
+                        <a href="article.php?id={$post->getId()}">{$smarty.const.DETAILS_TXT}</a>
+                        <br>
+                        <hr>
+                      </div>
+                    {/foreach}
+                  {else}
+                    {$smarty.const.NO_ARTICLES_FOUND}
+                  {/if}
                 </div>
             </div>
             <div id="push"></div>

@@ -49,8 +49,6 @@ CREATE TABLE notes (
     date_time DATETIME NOT NULL,
     body_en VARCHAR(150) NOT NULL,
     body_ua VARCHAR(150) NOT NULL,
-    project_id INT NOT NULL,
-    PRIMARY KEY(id),
-    FOREIGN KEY(project_id) REFERENCES projects(id) ON DELETE CASCADE
+    PRIMARY KEY(id)
 ) CHARACTER SET utf8;
 

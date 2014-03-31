@@ -49,12 +49,46 @@
 		return $article;
 	}
 
-	function new_article($article) {
+	function insert_article($article) {
 		$conn = open_db();
-		$query = "INSERT INTO articles VALUES ()";
+        $query = "INSERT INTO articles (date_time, title_en, title_ua, description_en, description_ua, body_en, body_ua) 
+        VALUES ('" .
+            $article->getDateTime() . "', '" .
+            $article->getTitleEN(). "', '" .
+            $article->getTitleUA(). "', '" .
+            $article->getDescEN(). "', '" .
+            $article->getDescUA(). "', '" .
+            $article->getBodyEN(). "', '" .
+            $article->getBodyUA(). "')";
+        $result = mysql_query($query);
+        $id = mysql_insert_id();
+
+        close_db();
+        return $id;
 	}
 
-	function update_atricle($article) {
+	function delete_article($article_id) {
+		$conn = open_db();
+        $query = "DELETE FROM articles WHERE id=$article_id";
+        $result = mysql_query($query);
+        close_db();
+	}
 
+	function update_article($article) {
+        $conn = open_db();
+        $query = "UPDATE articles 
+        SET title_en='" . $article->getTitleEN() . "',
+        title_ua='" . $article->getTitleUA() . "',
+        description_en='" . $article->getDescEN() . "',
+        description_ua='" . $article->getDescUA() . "',
+        body_en='" . $article->getBodyEN() . "',
+        body_ua='" . $article->getBodyUA() . "' 
+        WHERE id=" . $article->getId();
+        echo $query;
+        $result = mysql_query($query);
+        echo $result;
+        close_db();
+
+        return $result;
 	}
 ?>

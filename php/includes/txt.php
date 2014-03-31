@@ -16,7 +16,7 @@
 
                 //sidebar txt
                 define("NO_BROADCAST_TXT","No Broadcast"); 
-                define("NO_BROADCAST_DESC_TXT","Broadcast is currently closed"); 
+                define("NO_BROADCAST_DESC_TXT","Broadcast has no notes"); 
                 // footer txt
                 define("AUTHOR_TXT", "Eugenia Oshurko");
                 define("GO_UP_TXT", "Go up");
@@ -24,6 +24,7 @@
                 // for index.tpl
                 define("HOME_TITLE_TXT", "Home page");
                 define("DETAILS_TXT","Details"); 
+                define("NO_ARTICLES_FOUND", "Sorry, there is no articles yet");
 
                 // for article.tpl
                 define("EDIT_TXT", "Edit");
@@ -58,6 +59,22 @@
                                     
                 define("BUTTON_LABLE_TXT", "Publish");
 
+                // edit_article.tpl
+                define("EDIT_ARTICLE_TITLE_TXT", "Edit Article");
+                define("EDIT_ARTICLE_HEADER_TXT", "Edit the Article");
+                define("SAVE_BUTTON_LABLE_TXT", "Save Changes");
+                define("DISCARD_BUTTON_LABLE_TXT", "Discard Changes");
+
+
+                // for add_broadcast.tpl
+                define("ADD_BROADCAST_TITLE_TXT", "Start Broadcast");
+                define("ADD_BROADCAST_HEADER_TXT", "New Broadcast");
+                define("BTITLE_LABLE_EN_TXT", "Title Engligh");
+                define("BTITLE_PLACEHOLDER_EN_TXT", "Broadcast Name in English");
+                define("BTITLE_LABLE_UK_TXT", "Title Ukrainian");
+                define("BTITLE_PLACEHOLDER_UK_TXT", "Broadcast Name in Ukrainian");
+                define("BBUTTON_LABLE_TXT", "Start Broadcast");
+
                 // for add_note.tpl
                 define("ADD_NOTE_TITLE_TXT", "New note page");
                 define("ADD_NOTE_HEADER_TXT", "New Note to Broadcast");
@@ -86,7 +103,14 @@
                 define("LOGIN_PASSWORD_ERROR", "Invalid password");
                 define("LOGIN_USER_DOES_NOT_EXIST", "Authentication failed, check your username and password!");
                 define("PERMISSION_DENIED", "You don't have permission for this action");
-                
+                define("ADD_NOTE_ERROR", "Note body cannot be empty and must be shorter than 150 characters");
+                define("ADD_NOTE_ERROR_UNKNOWN", "Some error occured while processing your note, try again");
+                define("ADD_BROADCAST_ERROR", "Invalid broadcast name");
+                define("ADD_ATRICLE_TITLE_ERROR", "Article title must be non-empty and shorter than 80 characters");
+                define("ADD_ATRICLE_DESC_ERROR", "Article description must be non-empty and shorter than 300 characters");
+                define("ADD_ATRICLE_BODY_ERROR", "Article body must be non-empty");
+                define("ADD_ARTICLE_ERROR_UNKNOWN", "Some error occured while processing your article, try again");
+
                 break; 
             case "uk": 
                 define("BLOG_LOGO_TXT","Мій Блог"); 
@@ -102,7 +126,7 @@
 
                 //sidebar txt
                 define("NO_BROADCAST_TXT","Трансляція Неактивна"); 
-                define("NO_BROADCAST_DESC_TXT","На данний момент активних трансляцій немає"); 
+                define("NO_BROADCAST_DESC_TXT","Немає нотаток в трасляції"); 
                 //footer
                 define("AUTHOR_TXT", "Євгенія Ошурко");
                 define("GO_UP_TXT", "Вгору");
@@ -110,6 +134,8 @@
                 // for index.tpl
                 define("HOME_TITLE_TXT", "Головна сторінка");
                 define("DETAILS_TXT","Деталі"); 
+                define("NO_ARTICLES_FOUND", "На жаль, в блозі поки що немає записів");
+
 
                 // for article.tpl
                 define("EDIT_TXT", "Редагувати");
@@ -144,6 +170,20 @@
 
                 define("BUTTON_LABLE_TXT", "Публікувати");
 
+                // edit_article.tpl
+                define("EDIT_ARTICLE_TITLE_TXT", "Редагувати Запис");
+                define("EDIT_ARTICLE_HEADER_TXT", "Редагування Запису");
+                define("SAVE_BUTTON_LABLE_TXT", "Зберегти зміни");
+                define("DISCARD_BUTTON_LABLE_TXT", "Відмінити");
+
+                // for add_broadcast.tpl
+                define("ADD_BROADCAST_TITLE_TXT", "Розпочати трансляцію");
+                define("ADD_BROADCAST_HEADER_TXT", "Нова трансляція");
+                define("BTITLE_LABLE_EN_TXT", "Назва Англійською");
+                define("BTITLE_PLACEHOLDER_EN_TXT", "Назва трансляції англійською мовою");
+                define("BTITLE_LABLE_UK_TXT", "Назва Українською");
+                define("BTITLE_PLACEHOLDER_UK_TXT", "Назва трансляції українською мовою");
+                define("BBUTTON_LABLE_TXT", "Транслювати");
 
                 // for add_note.tpl
                 define("ADD_NOTE_TITLE_TXT", "Додати нову нотатку");
@@ -173,6 +213,14 @@
                 define("LOGIN_PASSWORD_ERROR", "Некоректний пароль");
                 define("LOGIN_USER_DOES_NOT_EXIST", "Помилка автентифікації, перевірте своє ім’я та пароль");
                 define("PERMISSION_DENIED", "Ви не маєте прав на здійснення цієї дії");
+                define("ADD_NOTE_ERROR", "Тіло запису не може бути пустим і має бути менше 150 знаків");
+                define("ADD_NOTE_ERROR_UNKNOWN", "Під час збереження запису виникла помилка, спробуйте ще раз");
+                define("ADD_BROADCAST_ERROR", "Некоректне ім’я трансляції");
+                define("ADD_ATRICLE_TITLE_ERROR", "Заголовок запису має бути непустим та не переважати 80 знаків");
+                define("ADD_ATRICLE_DESC_ERROR", "Опис запису має бути непустим та не переважати 300 знаків");
+                define("ADD_ATRICLE_BODY_ERROR", "Тіло запису має бути непустим");
+                define("ADD_ARTICLE_ERROR_UNKNOWN", "Під час збереження запису виникла помилка, спробуйте ще раз");
+
                 break; 
             default: 
                 define("BLOG_LOGO_TXT","My Blog"); 
@@ -188,7 +236,7 @@
                 
                 //sidebar txt
                 define("NO_BROADCAST_TXT","No Broadcast"); 
-                define("NO_BROADCAST_DESC_TXT","Broadcast is currently closed"); 
+                define("NO_BROADCAST_DESC_TXT","Broadcast has no notes"); 
                 // footer txt
                 define("AUTHOR_TXT", "Eugenia Oshurko");
                 define("GO_UP_TXT", "Go up");
@@ -196,6 +244,7 @@
                 // for index.tpl
                 define("HOME_TITLE_TXT", "Home page");
                 define("DETAILS_TXT","Details"); 
+                define("NO_ARTICLES_FOUND", "Sorry, there is no articles yet");
 
                 // for about.tpl
                 define("ABOUT_TITLE_TXT", "About project");
@@ -224,6 +273,21 @@
                 define("BODY_LABLE_UK_TXT", "Body Ukrainian");
                 define("BODY_PLACEHOLDER_UK_TXT", "Article Body in Ukrainian");
                 define("BUTTON_LABLE_TXT", "Publish");
+
+                // edit_article.tpl
+                define("EDIT_ARTICLE_TITLE_TXT", "Edit Article");
+                define("EDIT_ARTICLE_HEADER_TXT", "Edit the Article");
+                define("SAVE_BUTTON_LABLE_TXT", "Save Changes");
+                define("DISCARD_BUTTON_LABLE_TXT", "Discard Changes");
+
+                // for add_broadcast.tpl
+                define("ADD_BROADCAST_TITLE_TXT", "Start Broadcast");
+                define("ADD_BROADCAST_HEADER_TXT", "New Broadcast");
+                define("BTITLE_LABLE_EN_TXT", "Title Engligh");
+                define("BTITLE_PLACEHOLDER_EN_TXT", "Broadcast Name in English");
+                define("BTITLE_LABLE_UK_TXT", "Title Ukrainian");
+                define("BTITLE_PLACEHOLDER_UK_TXT", "Broadcast Name in Ukrainian");
+                define("BBUTTON_LABLE_TXT", "Start Broadcast");
 
                 // for add_note.tpl
                 define("ADD_NOTE_TITLE_TXT", "New note page");
@@ -256,6 +320,14 @@
                 define("LOGIN_PASSWORD_ERROR", "Invalid password");
                 define("LOGIN_USER_DOES_NOT_EXIST", "Authentication failed, check your username and password!");
                 define("PERMISSION_DENIED", "You don't have permission for this action");
+                define("ADD_NOTE_ERROR", "Note body cannot be empty and must be shorter than 150 characters");
+                define("ADD_NOTE_ERROR_UNKNOWN", "Some error occured while processing your note, try again");
+                define("ADD_BROADCAST_ERROR", "Invalid broadcast name");
+                define("ADD_ATRICLE_TITLE_ERROR", "Article title must be non-empty and shorter than 80 characters");
+                define("ADD_ATRICLE_DESC_ERROR", "Article description must be non-empty and shorter than 300 characters");
+                define("ADD_ATRICLE_BODY_ERROR", "Article body must be non-empty");
+                define("ADD_ARTICLE_ERROR_UNKNOWN", "Some error occured while processing your article, try again");
+
                 break; 
         } 
     } 

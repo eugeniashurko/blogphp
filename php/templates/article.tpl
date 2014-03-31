@@ -22,8 +22,8 @@
                     <p class="blog-post-meta">{$current_article->getDateTime()}</p>
                     <div class="control">
                       {if $logged_in}
-                        <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
-                        <a href="">{$smarty.const.DELETE_TXT}</a>
+                        <a href="edit_article.php?id={$current_article->getId()}">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
+                        <a href="delete_article.php?id={$current_article->getId()}">{$smarty.const.DELETE_TXT}</a>
                       {/if}
                     </div>
                       <p>{nl2br(htmlspecialchars($current_article->getBodyUA()))}</p>
@@ -34,8 +34,8 @@
                     <p class="blog-post-meta">{$current_article->getDateTime()}</p>
                     <div class="control">
                       {if $logged_in}
-                        <a href="">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
-                        <a href="">{$smarty.const.DELETE_TXT}</a>
+                        <a href="edit_article.php?id={$current_article->getId()}">{$smarty.const.EDIT_TXT}</a>&nbsp;&nbsp;
+                        <a href="delete_article.php?id={$current_article->getId()}">{$smarty.const.DELETE_TXT}</a>
                       {/if}
                     </div>
                       <p>{nl2br(htmlspecialchars($current_article->getBodyEN()))}</p>
