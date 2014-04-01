@@ -56,6 +56,8 @@
                 define("BODY_PLACEHOLDER_EN_TXT", "Article Body in English");
                 define("BODY_LABLE_UK_TXT", "Body Ukrainian");
                 define("BODY_PLACEHOLDER_UK_TXT", "Article Body in Ukrainian");
+
+                define("ADD_FILE_ERROR", "File is invalid (should be < 2Mb, jpeg/jpg/gif/png)");
                                     
                 define("BUTTON_LABLE_TXT", "Publish");
 
@@ -167,6 +169,7 @@
                 define("BODY_PLACEHOLDER_EN_TXT", "Текст статті англійською мовою");
                 define("BODY_LABLE_UK_TXT", "Тіло українською");
                 define("BODY_PLACEHOLDER_UK_TXT", "Текст статті українською мовою");
+                 define("ADD_FILE_ERROR", "Некоректиний файл (має бути < 2Mb, jpeg/jpg/gif/png )");
 
                 define("BUTTON_LABLE_TXT", "Публікувати");
 
@@ -272,6 +275,8 @@
                 define("BODY_PLACEHOLDER_EN_TXT", "Article Body in English");
                 define("BODY_LABLE_UK_TXT", "Body Ukrainian");
                 define("BODY_PLACEHOLDER_UK_TXT", "Article Body in Ukrainian");
+                define("ADD_FILE_ERROR", "File is invalid (should be < 2Mb, jpeg/jpg/gif/png )");
+
                 define("BUTTON_LABLE_TXT", "Publish");
 
                 // edit_article.tpl

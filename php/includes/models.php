@@ -36,14 +36,14 @@
         private $body;
         private $image;
 
-        public function __construct($i, $dt, $t_en, $t_ukr, $d_en, $d_ukr, $b_en, $b_ukr) {
+        public function __construct($i, $dt, $t_en, $t_ukr, $d_en, $d_ukr, $b_en, $b_ukr, $image = NULL) {
             $this->id = $i;
             $this->date_time = $dt;
             
             $this->title = array("en" => $t_en, "ua" => $t_ukr);
             $this->desc = array("en" => $d_en, "ua" => $d_ukr);
             $this->body = array("en" => $b_en, "ua" => $b_ukr);
-            $image = NULL;
+            $this->image = $image;
         }
 
         public function getId() {
@@ -69,6 +69,10 @@
         }
         public function getBodyUA() {
             return $this->body["ua"];
+        }
+
+        public function getImageId() {
+            return $this->image;
         }
 
 

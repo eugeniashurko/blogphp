@@ -16,7 +16,7 @@
             <div class="page-content inset">
                 <div class="row">
               {if $logged_in}    
-              	<form action="proceed_add_article.php" method="post" class="form-horizontal">
+              	<form action="proceed_add_article.php" method="post" class="form-horizontal" enctype="multipart/form-data">
                       <!-- Form Name -->
                       <legend><h2>{$smarty.const.ADD_ARTICLE_HEADER_TXT}</h2></legend>
                       {if ($message)}
@@ -70,7 +70,7 @@
                       <div class="control-group">
                         <label class="control-label" for="checkboxes"></label>
                         <div class="controls">
-                            <input type="file" name="datafile" size="40">
+                            <input type="file" name="file" id="file">
                         </div>
                       </div>
 

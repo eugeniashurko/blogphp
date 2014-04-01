@@ -25,7 +25,7 @@
 
     function is_valid_note_body($body) {
         $res = true;
-        if (strlen($body) < 1 || strlen($body) > 150 ) {
+        if (mb_strlen($body, 'UTF-8') < 1 || mb_strlen($body, 'UTF-8') > 150 ) {
             $res = false;
         }
         return $res;
@@ -33,7 +33,7 @@
 
     function is_valid_title($title) {
         $res = true;
-        if (strlen($title) < 1 || strlen($title) > 80 ) {
+        if (mb_strlen($title, 'UTF-8') < 1 || mb_strlen($title, 'UTF-8') > 80 ) {
             $res = false;
         }
         return $res;
@@ -41,7 +41,7 @@
     
     function is_valid_desc($desc) {
         $res = true;
-        if (strlen($desc) < 1 || strlen($desc) > 300 ) {
+        if (mb_strlen($desc, 'UTF-8') < 1 || mb_strlen($desc, 'UTF-8') > 300 ) {
             $res = false;
         }
         return $res;
@@ -49,7 +49,7 @@
 
     function is_valid_body($body) {
         $res = true;
-        if (strlen($body) < 1) {
+        if (mb_strlen($body, 'UTF-8') < 1) {
             $res = false;
         }
         return $res;

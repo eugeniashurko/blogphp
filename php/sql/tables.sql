@@ -14,11 +14,9 @@ CREATE TABLE users (
 
 CREATE TABLE images (
     id INT AUTO_INCREMENT,
-    image_type VARCHAR(25) NOT NULL,
-    image LONGBLOB NOT NULL,
-    image_size VARCHAR(25) NOT NULL,
-    image_ctgy VARCHAR(25) NOT NULL,
     image_name VARCHAR(50) NOT NULL,
+    image_type VARCHAR(25) NOT NULL,
+    image_size VARCHAR(25) NOT NULL,
     PRIMARY KEY(id) 
 ) CHARACTER SET utf8;
 

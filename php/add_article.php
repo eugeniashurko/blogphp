@@ -11,7 +11,7 @@
     if (isset($_SESSION["user_id"])) {
         $logged_in = true;
     }
-
+    $message = NULL;
     if(isset( $_GET['m'] )) {
         $message = $_GET['m'];
     }

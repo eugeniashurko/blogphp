@@ -26,7 +26,13 @@
                         <a href="delete_article.php?id={$current_article->getId()}">{$smarty.const.DELETE_TXT}</a>
                       {/if}
                     </div>
-                      <p>{nl2br(htmlspecialchars($current_article->getBodyUA()))}</p>
+                      <p>
+                       {if !is_null($current_article->getImageId())}
+                            <div class="image-container-full">
+                              <img src="{get_image($current_article->getImageId())}" align="left">
+                            </div>
+                          {/if}
+                      {nl2br(htmlspecialchars($current_article->getBodyUA()))}</p>
                       <br>
                     </div>
                   {else}
